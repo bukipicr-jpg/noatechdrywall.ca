@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NoaTech Drywall and Painting Services provides drywall repair, taping, mudding, ceiling and stipple work, and painting in Ottawa, Orleans and surrounding areas.">
+  <title>NoaTech Drywall and Painting Services | Ottawa</title>
+  <style>
+    :root { --navy:#17324d; --blue:#315d7e; --ink:#202b36; --muted:#647282; --pale:#f3f6f8; --white:#fff; --line:#dfe6eb; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--ink); line-height:1.6; background:#fff; }
+    a { color:inherit; }
+    .wrap { width:min(1100px, 92%); margin:auto; }
+    header { background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:10; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:15px 0; }
+    .brand { text-decoration:none; color:var(--navy); font-weight:800; letter-spacing:.2px; font-size:1.2rem; line-height:1.2; }
+    .brand small { display:block; font-size:.68rem; letter-spacing:1.1px; margin-top:5px; }
+    nav { display:flex; gap:22px; align-items:center; flex-wrap:wrap; }
+    nav a { text-decoration:none; color:#3d4b59; font-size:.94rem; }
+    nav a:hover { color:var(--blue); }
+    .button { display:inline-block; text-decoration:none; border:0; border-radius:6px; padding:13px 19px; background:var(--navy); color:white; font-weight:700; cursor:pointer; }
+    .button:hover { background:var(--blue); }
+    .hero { background:linear-gradient(120deg,#f3f6f8 0%,#fff 70%); padding:76px 0 68px; }
+    .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center; }
+    .eyebrow { color:var(--blue); font-size:.8rem; font-weight:800; letter-spacing:1.6px; text-transform:uppercase; }
+    h1 { color:var(--navy); font-size:clamp(2.35rem,5vw,4.1rem); line-height:1.08; margin:14px 0 20px; letter-spacing:-1.5px; }
+    h2 { color:var(--navy); font-size:clamp(1.8rem,3vw,2.5rem); line-height:1.2; margin:0 0 14px; }
+    h3 { color:var(--navy); margin:0 0 8px; }
+    p { margin:0 0 16px; }
+    .lead { color:#526171; font-size:1.12rem; max-width:620px; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .button.secondary { background:#fff; color:var(--navy); border:1px solid #bdcbd6; }
+    .visual { min-height:330px; border-radius:14px; padding:25px; background:linear-gradient(145deg,#dce6ed,#f7f9fa); display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; position:relative; }
+    .visual:before { content:""; position:absolute; width:260px; height:260px; border-radius:50%; background:rgba(255,255,255,.68); top:-75px; right:-35px; }
+    .room { position:absolute; inset:35px 28px 95px; border:8px solid #fff; background:linear-gradient(180deg,#fdfdfd 0 72%,#d8d4cd 72% 75%,#e9e5de 75%); box-shadow:0 8px 25px #17324d15; }
+    .room:before { content:""; position:absolute; left:12%; top:12%; width:37%; height:48%; background:linear-gradient(90deg,#d6e2e9,#f8fafb); border:7px solid #fff; box-shadow:0 3px 8px #0001; }
+    .room:after { content:""; position:absolute; right:9%; bottom:0; width:32%; height:45%; background:#b8c5ce; border:6px solid #fff; border-bottom:0; }
+    .visual-caption { position:relative; z-index:1; background:#fff; border-radius:8px; padding:13px 15px; box-shadow:0 4px 18px #17324d12; font-weight:700; color:var(--navy); }
+    section { padding:70px 0; }
+    .section-head { max-width:650px; margin-bottom:30px; }
+    .section-head p { color:var(--muted); }
+    .services { background:#fff; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { border:1px solid var(--line); border-radius:10px; padding:24px; background:#fff; }
+    .icon { width:42px; height:42px; border-radius:9px; background:var(--pale); display:grid; place-items:center; color:var(--blue); font-size:1.25rem; margin-bottom:17px; }
+    .card p { color:var(--muted); margin-bottom:0; font-size:.96rem; }
+    .about { background:var(--pale); }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+    .checklist { list-style:none; padding:0; margin:20px 0 0; }
+    .checklist li { margin:10px 0; }
+    .checklist li:before { content:"✓"; color:var(--blue); font-weight:800; margin-right:10px; }
+    .note { color:var(--muted); font-size:.9rem; }
+    .contact-grid { display:grid; grid-template-columns:.85fr 1.15fr; gap:40px; }
+    .contact-panel { background:var(--navy); color:#fff; padding:28px; border-radius:12px; }
+    .contact-panel h2, .contact-panel h3 { color:#fff; }
+    .contact-panel a { color:#fff; }
+    form { display:grid; gap:14px; }
+    label { font-size:.92rem; font-weight:700; display:block; margin-bottom:5px; }
+    input, select, textarea { width:100%; padding:12px; border:1px solid #cbd5dd; border-radius:6px; font:inherit; background:#fff; }
+    textarea { min-height:120px; resize:vertical; }
+    .form-help { font-size:.86rem; color:var(--muted); }
+    footer { background:#102638; color:#e8eef3; padding:24px 0; font-size:.9rem; }
+    footer .foot { display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; }
+    @media (max-width:760px) {
+      .nav { align-items:flex-start; flex-direction:column; }
+      nav { gap:14px; }
+      .hero { padding:50px 0; }
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns:1fr; }
+      .visual { min-height:270px; }
+      .cards { grid-template-columns:1fr; }
+      section { padding:52px 0; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">NoaTech<small>DRYWALL &amp; PAINTING SERVICES</small></a>
+    <nav aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="button" href="#contact">Get a Free Estimate</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Serving Ottawa, Orleans &amp; surrounding areas</div>
+        <h1>Quality Work.<br>Clean Finish.<br>Reliable Service.</h1>
+        <p class="lead">Professional drywall and painting services for residential and commercial spaces. From repairs and smooth finishes to fresh paint, we help make your space look its best.</p>
+        <div class="hero-actions">
+          <a class="button" href="#contact">Request a Free Estimate</a>
+          <a class="button secondary" href="#services">Explore Our Services</a>
+        </div>
+      </div>
+      <div class="visual" role="img" aria-label="Illustration of a bright, freshly finished room">
+        <div class="room"></div>
+        <div class="visual-caption">Careful preparation. Professional finish.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">What we do</div>
+        <h2>Services for your next project</h2>
+        <p>Whether you need a small repair or help refreshing a room, contact us to discuss your project and request an estimate.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">▤</div><h3>Drywall Repair &amp; Installation</h3><p>Drywall patching, board installation, damaged-area repairs and ceiling repairs.</p></article>
+        <article class="card"><div class="icon">✎</div><h3>Taping, Mudding &amp; Sanding</h3><p>Joint taping, mudding, sanding and preparation for a smooth, paint-ready finish.</p></article>
+        <article class="card"><div class="icon">◒</div><h3>Ceilings &amp; Stipple</h3><p>Stipple repair, removal and application, plus ceiling preparation and finishing.</p></article>
+        <article class="card"><div class="icon">▧</div><h3>Interior &amp; Exterior Painting</h3><p>Painting services to refresh rooms, walls, ceilings and suitable exterior surfaces.</p></article>
+        <article class="card"><div class="icon">⌂</div><h3>Trim, Baseboards &amp; Flooring</h3><p>Trim and baseboard work and vinyl flooring installation for a neat, finished look.</p></article>
+        <article class="card"><div class="icon">＋</div><h3>Other Repair Projects</h3><p>Ask us about parging and other renovation or repair work. Specialized services are assessed project by project.</p></article>
+      </div>
+      <p class="note" style="margin-top:20px">For specialized work such as Poly-B replacement or mold remediation, confirm project scope and applicable requirements before booking.</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="eyebrow">About NoaTech</div>
+        <h2>Practical service. A finish you can feel good about.</h2>
+        <p>At NoaTech Drywall and Painting Services, we help homeowners and businesses improve their spaces with drywall, ceiling and painting work. We aim to communicate clearly, prepare carefully and leave the work area tidy.</p>
+        <ul class="checklist">
+          <li>Residential and commercial projects</li>
+          <li>Service across Ottawa, Orleans and nearby communities</li>
+          <li>Clear estimates and project communication</li>
+          <li>Respect for your home and work area</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Have a project in mind?</h3>
+        <p>Tell us what needs to be done, where the project is located and when you'd like to get started. Photos are helpful when requesting an estimate.</p>
+        <a class="button" href="#contact">Tell Us About Your Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Request a free estimate</h2>
+        <p>Send us a few details about your project. We'll follow up using the contact information you provide.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-panel">
+          <h2>Contact NoaTech</h2>
+          <p>Drywall and painting services in Ottawa, Orleans and surrounding areas.</p>
+          <p><strong>Email</strong><br><a href="mailto:b.picrri@hotmail.com">b.picrri@hotmail.com</a></p>
+          <p><strong>Service area</strong><br>Ottawa, Orleans and surrounding communities, Ontario</p>
+          <p class="note" style="color:#d8e3ec">Add your business phone number and real project photos whenever you're ready.</p>
+        </div>
+        <div>
+          <form id="quoteForm">
+            <div><label for="name">Your name *</label><input id="name" name="name" required autocomplete="name"></div>
+            <div><label for="email">Your email *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+            <div><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div><label for="service">Service needed *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Drywall repair or installation</option><option>Taping, mudding or sanding</option><option>Ceiling or stipple work</option><option>Interior or exterior painting</option><option>Trim, baseboards or flooring</option><option>Other project</option></select></div>
+            <div><label for="details">Project details *</label><textarea id="details" name="details" required placeholder="Describe the work, project location and preferred timing."></textarea></div>
+            <button class="button" type="submit">Prepare Email Request</button>
+            <p class="form-help">This form opens your email app with your request filled in; it does not send anything automatically.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> NoaTech Drywall and Painting Services</span><span>Ottawa · Orleans · Surrounding areas</span></div></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('quoteForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const f = new FormData(event.target);
+    const subject = encodeURIComponent('Free Estimate Request - ' + f.get('service'));
+    const body = encodeURIComponent(
+      'Name: ' + f.get('name') + '\\nEmail: ' + f.get('email') +
+      '\\nPhone: ' + (f.get('phone') || 'Not provided') +
+      '\\nService: ' + f.get('service') + '\\n\\nProject details:\\n' + f.get('details')
+    );
+    window.location.href = 'mailto:b.picrri@hotmail.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+</body>
+</html>
